@@ -12,7 +12,7 @@ const router = express.Router();
 // Routing WEB
 
 //--- Home
-router.get('/home',
+router.get('/index',
     (req, res) => {
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
         res.send("Đây là trang Home !");
@@ -20,10 +20,10 @@ router.get('/home',
 );
 
 //--- Profile
-router.get('/profile',
+router.get('/checkout',
     (req, res) => {
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang Profile !");
+        res.send("Đây là trang checkou !");
     }
 );
 
@@ -40,6 +40,27 @@ router.get('/logout',
     (req, res) => {
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
         res.send("Đây là trang Logout !");
+    }
+);
+//--- register
+router.get('/register',
+    (req, res) => {
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.send("Đây là trang register !");
+    }
+);
+//--- single
+router.get('/single',
+    (req, res) => {
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.send("Đây là trang single !");
+    }
+);
+//--- shop
+router.get('/shop',
+    (req, res) => {
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.send("Đây là trang shop !");
     }
 );
 
