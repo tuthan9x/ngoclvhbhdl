@@ -4,63 +4,52 @@
 // Mở thư viện fs, express
 // const fs = require("fs");
 const express = require("express");
+var path = require('path');
 // Tham số - Web lắng nghe tại xport
 xport = process.env.PORT || 3000;
 // Tạo App Web
 const app = express();
 const router = express.Router();
 // Routing WEB
+// MVC
 
-//--- Home
-router.get('/index',
+//--- checkout
+router.get('/',
     (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang Home !");
+        res.sendFile(__dirname + "/ngoclvhbhdl/checkout.html");
     }
 );
 
-//--- Profile
-router.get('/checkout',
+//--- index
+router.get('/index',
     (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang checkou !");
+        res.sendFile(__dirname + "/ngoclvhbhdl/index.html");
     }
 );
 
 //--- Login
 router.get('/login',
     (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang Login !");
+        res.sendFile(__dirname + "/ngoclvhbhdl/login.html");
     }
 );
 
-//--- Logout
-router.get('/logout',
-    (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang Logout !");
-    }
-);
 //--- register
 router.get('/register',
     (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang register !");
-    }
-);
-//--- single
-router.get('/single',
-    (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang single !");
+        res.sendFile(__dirname + "/ngoclvhbhdl/register.html");
     }
 );
 //--- shop
 router.get('/shop',
     (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang shop !");
+        res.sendFile(__dirname + "/ngoclvhbhdl/shop.html");
+    }
+);
+//--- single
+router.get('/single',
+    (req, res) => {
+        res.sendFile(__dirname + "/ngoclvhbhdl/single.html");
     }
 );
 
