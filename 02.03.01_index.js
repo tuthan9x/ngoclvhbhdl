@@ -14,7 +14,7 @@ const router = express.Router();
 // MVC
 
 //--- checkout
-router.get('/',
+router.get('/checkout',
     (req, res) => {
         res.sendFile(__dirname + "/ngoclvhbhdl/checkout.html");
     }
